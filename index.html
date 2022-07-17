@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Requested Video</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section>
+        <h2>Requested Video</h2>
+      <P>Fine...... you win</P>
+      <button class="btn">Click Here</button>
+        
+      <div class="popup">
+            <h2>Happy now? ;) <br>-DC</h2>
+            <b class="close">x</b>
+        </div>
+  </section>
+
+  <canvas id="my-canvas"></canvas>
+
+  <script src="index.min.js"></script>
+  <script>
+    let btn = document.querySelector('.btn'); 
+    let popup = document.querySelector('.popup');
+    let close = document.querySelector('.close');
+    let confe = document.querySelector('#my-canvas');
+    btn.onclick = function(){
+        popup.classList.add('active');
+        confe.classList.add('active');
+    }
+    close.onclick = function(){
+        popup.classList.remove('active');
+        confe.classList.remove('active');
+    }
+
+
+ var confettiSettings = { target: 'my-canvas' };
+ var confetti = new ConfettiGenerator(confettiSettings);
+ confetti.render();
+  </script>
+</body>
+</html>
